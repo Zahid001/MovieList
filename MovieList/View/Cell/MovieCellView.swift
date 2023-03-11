@@ -15,7 +15,7 @@ struct MovieCellView: View {
             VStack{
                 Spacer()
                 
-                AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500" + (result.poster_path ?? ""))){ image in
+                AsyncImage(url: URL(string: imgRoot + (result.poster_path ?? ""))){ image in
                     image
                         .resizable()
                         .scaledToFit()
