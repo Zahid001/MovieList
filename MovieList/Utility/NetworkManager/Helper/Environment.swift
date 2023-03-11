@@ -11,6 +11,7 @@ typealias StatusCode = Int
 let kTimeoutInterval: TimeInterval = 30.0
 let kNetworkEnvironment: Environment = .development
 let kRequestCachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalCacheData
+let imgRoot = "https://image.tmdb.org/t/p/w500"
 
 enum Environment: String, CaseIterable {
     case beta
