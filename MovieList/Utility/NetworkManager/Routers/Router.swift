@@ -33,10 +33,10 @@ enum Router {
     // MARK: - Parameters
     var parameters: HTTPParameters {
         switch self {
-        case .movie( let page):
+        case .movie( let query):
             return [
                 "api_key": kNetworkEnvironment.apiKey,
-                "page": page,
+                "query": query,
             ]
         }
     }

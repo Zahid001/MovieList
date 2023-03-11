@@ -12,21 +12,17 @@ class MovieListVM:ObservableObject {
     var dispatchWorkItem:DispatchWorkItem?
     private var networkManager = NetworkManager()
     
-    @Published var page = 1
     @Published var searchText = ""
     
     @Published var results:[Results] = []
     
     init(){
-        
+        getItems(query: "all")
     }
     
-    func loadMore(){
-        page += 1
-        getItems(query: searchText, page: "\(page)")
-    }
+ 
     
-    func getItems (query:String,page:String) {
+    func getItems (query:String) {
         dispatchWorkItem?.cancel()
         
         if query.isEmpty {
@@ -41,10 +37,7 @@ class MovieListVM:ObservableObject {
                 self?.networkManager.request(request) {[weak self] (result: Result<MovieDataBase, Error>) in
                     switch result {
                     case .success(let repositoryModelBase):
-//                        if Int(page) == 1 {
-//                            self?.results = []
-//                        }
-                        self?.results += repositoryModelBase.results ?? []
+                        self?.results = repositoryModelBase.results ?? []
                     case .failure(let error):
                         if let error = error as? NetworkError {
                             let message = ErrorMapper(error: error).message
