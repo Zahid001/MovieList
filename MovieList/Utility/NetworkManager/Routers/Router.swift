@@ -12,12 +12,12 @@ typealias HTTPParameters = [String: Any]?
 enum Router {
     
    
-    case repositories(String,String)
+    case movie(String)
     
     // MARK: - HTTP Method
     var method: HTTPMethod {
         switch self {
-        case  .repositories:
+        case  .movie:
             return .get
         }
     }
@@ -25,26 +25,24 @@ enum Router {
     // MARK: - Path
     var path: String {
         switch self {
-        case .repositories:
-            return "repositories"
+        case .movie:
+            return "movie"
         }
     }
     
     // MARK: - Parameters
     var parameters: HTTPParameters {
         switch self {
-        case .repositories(let query, let page):
+        case .movie( let page):
             return [
-                "q": query,
+                "api_key": kNetworkEnvironment.apiKey,
                 "page": page,
             ]
-        default:
-            return nil
         }
     }
     
     var url: URL {
-        guard let url = URL(string: kNetworkEnvironment.baseURL + "/search/") else {
+        guard let url = URL(string: kNetworkEnvironment.baseURL + "/3/search/") else {
             fatalError(ErrorMessage.invalidUrl.rawValue)
         }
         return url
