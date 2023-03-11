@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		310F163F29BCF4600048772A /* MovieDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310F163E29BCF4600048772A /* MovieDatabase.swift */; };
+		310F164129BCF5140048772A /* MovieListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310F164029BCF5140048772A /* MovieListVM.swift */; };
 		311BDD2B29BCEE6A009A0A64 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BDD1929BCEE69009A0A64 /* Router.swift */; };
 		311BDD2C29BCEE6A009A0A64 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BDD1A29BCEE69009A0A64 /* NetworkManager.swift */; };
 		311BDD2D29BCEE6A009A0A64 /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311BDD1C29BCEE69009A0A64 /* ErrorMapper.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		310F163E29BCF4600048772A /* MovieDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDatabase.swift; sourceTree = "<group>"; };
+		310F164029BCF5140048772A /* MovieListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListVM.swift; sourceTree = "<group>"; };
 		311BDD1929BCEE69009A0A64 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		311BDD1A29BCEE69009A0A64 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		311BDD1C29BCEE69009A0A64 /* ErrorMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorMapper.swift; sourceTree = "<group>"; };
@@ -60,6 +64,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		310F163B29BCF3580048772A /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				310F164029BCF5140048772A /* MovieListVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		310F163C29BCF36B0048772A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		310F163D29BCF3750048772A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				310F163E29BCF4600048772A /* MovieDatabase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		311BDD1629BCEE69009A0A64 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +177,9 @@
 			children = (
 				31887A6729BCEDCC0072ABA3 /* MovieListApp.swift */,
 				31887A6929BCEDCC0072ABA3 /* ContentView.swift */,
+				310F163D29BCF3750048772A /* Model */,
+				310F163C29BCF36B0048772A /* View */,
+				310F163B29BCF3580048772A /* VM */,
 				311BDD1629BCEE69009A0A64 /* Utility */,
 				31887A6B29BCEDD30072ABA3 /* Assets.xcassets */,
 				31887A6D29BCEDD30072ABA3 /* Preview Content */,
@@ -246,7 +276,9 @@
 				311BDD3729BCEE6A009A0A64 /* View+Extension.swift in Sources */,
 				311BDD2D29BCEE6A009A0A64 /* ErrorMapper.swift in Sources */,
 				311BDD3129BCEE6A009A0A64 /* Environment.swift in Sources */,
+				310F164129BCF5140048772A /* MovieListVM.swift in Sources */,
 				31887A6A29BCEDCC0072ABA3 /* ContentView.swift in Sources */,
+				310F163F29BCF4600048772A /* MovieDatabase.swift in Sources */,
 				311BDD3529BCEE6A009A0A64 /* Binding+Extension.swift in Sources */,
 				311BDD2E29BCEE6A009A0A64 /* ErrorHandler.swift in Sources */,
 				311BDD2B29BCEE6A009A0A64 /* Router.swift in Sources */,
